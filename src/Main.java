@@ -7,19 +7,15 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Cupcake> cupcakeMenu = new ArrayList<Cupcake>();
-
         // new Cupcake object named cupcake
         Cupcake cupcake = new Cupcake();
-
         // new RedVelvet object named redVelvet
         RedVelvet redVelvet = new RedVelvet();
-
         // new Chocolate object named chocolate
         Chocolate chocolate = new Chocolate();
 
         System.out.println("We are in the middle of creating the cupcake menu. We currently have three cupcakes on" +
                 "\nthe menu but we need to decide on pricing");
-
         Scanner input = new Scanner(System.in);
 
         System.out.println("We are deciding on the price for our standard cupcake. Here is the description: ");
@@ -52,7 +48,6 @@ public class Main {
         cupcakeMenu.add(cupcake);
         cupcakeMenu.add(redVelvet);
         cupcakeMenu.add(chocolate);
-
 
         // new ArrayList which contains drinkMenu
         ArrayList<Drink> drinkMenu = new ArrayList<Drink>();
@@ -96,14 +91,18 @@ public class Main {
         drinkMenu.add(soda);
         drinkMenu.add(milk);
 
-        System.out.println("\n---Cupcake Menu---\n");
-        for(Cupcake i : cupcakeMenu) {
-            System.out.println(i.getClass().getSimpleName() + " Price: " + i.getPrice());
-        }
-        System.out.println("\n---Drink Menu---\n");
-        for(Drink i : drinkMenu) {
-            System.out.println(i.getClass().getSimpleName() + " Price: " + i.getPrice());
-        }
+        new Order(cupcakeMenu, drinkMenu);
+
+//        test menu array
+//        System.out.println("\n---Cupcake Menu---\n");
+//        for(Cupcake i : cupcakeMenu) {
+//            System.out.println(i.getClass().getSimpleName() + " Price: " + i.getPrice());
+//        }
+//        System.out.println("\n---Drink Menu---\n");
+//        for(Drink i : drinkMenu) {
+//            System.out.println(i.getClass().getSimpleName() + " Price: " + i.getPrice());
+//        }
+
 
     }
 
